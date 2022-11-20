@@ -1,5 +1,15 @@
-<h1>All lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_url "moulin_rouge.jpeg" %>');">
+  <div class="container">
+    <h1>All your movie <strong>lists</strong></h1>
+    <p>Start placing your <strong>favourites movies</strong> in customised lists.</p>
+    <a class="btn btn-flat" href="#">Create <strong>list</strong></a>
+  </div>
+</div>
 
-<p><% @lists.each do |list| %>
-<%= list.name %>
-<% end %></p>
+<div class="cards">
+  <% @lists.each do |list| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <%= list.name %>
+  </div>
+  <% end %>
+</div>
